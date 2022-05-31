@@ -1,0 +1,163 @@
+* {
+  font-family: "Arvo", serif;
+  font-size: 0.8rem;
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media (min-width: 800px) {
+  body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 80vw;
+  }
+}
+body .NavBar {
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+body .NavBar .puma-logo {
+  width: 8rem;
+}
+body .NavBar hr {
+  width: 100%;
+  margin: 0;
+}
+body .NavBar .nav-display {
+  width: 13rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+body .NavBar .nav-display_btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-decoration: none;
+  color: black;
+  text-decoration: none;
+}
+body .NavBar .nav-display_btn:hover, body .NavBar .nav-display_btn:active {
+  color: gray;
+}
+body .aside {
+  background-color: rgb(204, 204, 204);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  position: fixed;
+  top: auto;
+  left: 0;
+  right: 0;
+}
+body .aside .aside-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+body .aside .aside-ul .aside-ul__li {
+  list-style: none;
+  width: 60vw;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 1px solid black;
+}
+body .aside .aside-ul .aside-ul__li:last-child {
+  border-bottom: none;
+}
+body .aside .aside-ul .aside-ul__li .aside-ul__li_btn {
+  text-decoration: none;
+  color: #000;
+}
+body .aside .aside-ul .aside-ul__li .aside-ul__li_btn:hover, body .aside .aside-ul .aside-ul__li .aside-ul__li_btn:active {
+  color: rgb(64, 64, 64);
+  transition: all 0.5s;
+}
+body .aside .aside-ul .aside-ul__li input {
+  padding: 0.4rem;
+  width: 15rem;
+}
+body .main {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  border: 1px solid red;
+  justify-items: center;
+}
+body .main .item-container {
+  text-align: center;
+}
+body .main .item-container img {
+  width: 150px;
+  height: 150px;
+}
+
+@media (min-width: 800px) {
+  body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 80vw;
+  }
+
+  .aside {
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: auto;
+    left: 15%;
+    right: 15%;
+  }
+  .aside .aside-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .aside .aside-ul .aside-ul__li {
+    list-style: none;
+    width: 60vw;
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 1px solid black;
+  }
+  .aside .aside-ul .aside-ul__li:last-child {
+    border-bottom: none;
+  }
+  .aside .aside-ul .aside-ul__li .aside-ul__li_btn {
+    text-decoration: none;
+    color: #000;
+  }
+  .aside .aside-ul .aside-ul__li .aside-ul__li_btn:hover, .aside .aside-ul .aside-ul__li .aside-ul__li_btn:active {
+    color: rgb(64, 64, 64);
+  }
+  .aside .aside-ul .aside-ul__li input {
+    padding: 0.4rem;
+    width: 15rem;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 80vw;
+  }
+}/*# sourceMappingURL=style.css.map */

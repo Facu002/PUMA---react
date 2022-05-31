@@ -1,0 +1,117 @@
+[
+    {
+        "0": {
+            "id": 0,
+            "name": "Buzo T7 GO FOR con capucha",
+            "description": "Todos deberían tener un buen Buzo con capucha, y este es ciertamente perfecto. Tiene el ajuste holgado que queres en una prenda de este tipo, dobladillo y puños acanalados e inserciones con la franja T7 en las mangas. Incorpora un bolsillo estilo canguro en el frente para que lleves tu teléfono, billetera o lo que necesites tener a mano. Y para asegurarte de que te quede perfecto, la capucha cuenta con un cordón para ajustarla fácilmente.",
+            "price": 13999,
+            "stock": 10,
+            "categoy": "clothes",
+            "images": [
+                {
+                    "0": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/534175/50/mod01/fnd/ARG/fmt/png",
+                    "1": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/534175/50/mod02/fnd/ARG/fmt/png",
+                    "2": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/534175/50/fnd/ARG/fmt/png",
+                    "3": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/534175/50/bv/fnd/ARG/fmt/png"
+                }
+            ]
+        },
+        "1": {
+            "id": 1,
+            "name": "Campera Iconic T7",
+            "description": "La colección original de PUMA T7, denominada así por sus características rayas de 7 cm, se inspiró en las pistas de atletismo, pero rápidamente se hizo tan popular en las calles como en los entrenamientos. Rescatado directamente de los archivos, este conjunto se ha replicado fielmente y es tan icónico hoy como lo fue en el pasado. Con franjas en las mangas y un ajuste elegante, esta campera deportiva hará que los clásicos sean tendencia otra vez.",
+            "price": 16499,
+            "stock": 10,
+            "categoy": "clothes",
+            "images": [
+                {
+                    "0": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/530094/01/mod01/fnd/ARG/fmt/png",
+                    "1": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/530094/01/mod02/fnd/ARG/fmt/png",
+                    "2": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/530094/01/fnd/ARG/fmt/png",
+                    "3": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/530094/01/bv/fnd/ARG/fmt/png"
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "name": "Buzo con capucha Classics Logo para mujer",
+            "description": "Relajate y acurrucate en este buzo con capucha sustentable y elegante, hecho con algodón BCI y poliéster reciclado. La capucha con cordón de ajuste, un bolsillo canguro, los puños acanalados y el amplio y audaz logotipo del PUMA, hacen que este buzo sea un abrigo clásico.",
+            "price": 12999,
+            "stock": 17,
+            "categoy": "collection",
+            "images": [
+                {
+                    "0": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/530075/76/mod01/fnd/ARG/fmt/png",
+                    "1": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/530075/76/mod02/fnd/ARG/fmt/png",
+                    "2": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/530075/76/fnd/ARG/fmt/png",
+                    "3": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/530075/76/bv/fnd/ARG/fmt/png"
+                }
+            ]
+        },
+        "3": {
+            "id": 3,
+            "name": "Botines FUTURE Z 3.3 FG/AG",
+            "description": "Elegantes, perfilados y sofisticados, los FUTURE Z 3.3 están diseñados para un fútbol intenso. Cada zapato cuenta con la tecnología FUZIONFIT+ de segunda generación y se adapta a la forma del pie, garantizando un ajuste óptimo y el equilibrio ideal entre sujeción y flexibilidad – con o sin cordones. Las zonas Advanced Creator en el antepié permiten un control y un pase excepcionales de la pelota a alta velocidad, mientras que la suela exterior liviana y altamente reactiva con remaches para pasto natural y artificial aportan una tracción superior. Son elegantes, pero ligeros, y tienen un diseño fácil de poner para una mayor comodidad. Además, incorporan un detalle de marca PUMA Llamátivo y una increíble combinación de colores que resaltan con estilo para jugar como un profesional.",
+            "price": 16499,
+            "stock": 12,
+            "categoy": "sport",
+            "images": [
+                {
+                    "0": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/106973/01/sv01/fnd/ARG/fmt/png",
+                    "1": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/106973/01/fnd/ARG/fmt/png",
+                    "2": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/106973/01/bv/fnd/ARG/fmt/png",
+                    "3": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/106973/01/sv04/fnd/ARG/fmt/png"
+                }
+            ]
+        },
+        "4": {
+            "id": 4,
+            "name": "Zapatillas Cruise Rider para mujer",
+            "description": "Inspiradas en la belleza de las famosas Silk Road, estas zapatillas incluyen combinaciones de colores que crean un look muy original. La entresuela IMEVA te brinda liviandad y comodidad para que tus pies sean felices.",
+            "price": 18999,
+            "stock": 5,
+            "categoy": "footwear",
+            "images": [
+                {
+                    "0": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/375072/07/sv01/fnd/ARG/fmt/png",
+                    "1": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/375072/07/fnd/ARG/fmt/png",
+                    "2": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/375072/07/bv/fnd/ARG/fmt/png",
+                    "3": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/375072/07/sv04/fnd/ARG/fmt/png"
+                }
+            ]
+        },
+        "5": {
+            "id": 5,
+            "name": "Guantes Essential de entrenamiento",
+            "description": "Con las propiedades PWRCool de PUMA, estos guantes de entrenamiento actúan como una segunda piel, solo que esta capa adicional tiene propiedades de agarre optimizadas y funciones de ventilación mejoradas. Estos guantes cuentan con materiales adaptables estratégicamente situados que estimulan la circulación de aire y permiten que la piel transpire. La palma está adornada con ante y un acolchado para ofrecer mayor comodidad, y está cubierta con puntos antideslizantes que te ayudan a sujetar las mancuernas y las pesas sin esfuerzo. El elástico está tejido en la parte trasera y el cierre de velcro permite un ajuste personalizado y perfecto. La marca de PUMA aparece en la parte trasera y en la etiqueta tejida en la costura lateral.",
+            "price": 5999,
+            "stock": 7,
+            "categoy": "sport",
+            "images": [
+                {
+                    "0": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/041466/03/fnd/ARG/fmt/png",
+                    "1": "",
+                    "2": "",
+                    "3": ""
+                }
+            ]
+        },
+        "6": {
+            "id": 6,
+            "name": "Zapatillas PUMA x ANIMAL CROSSING Wild Rider",
+            "description": "¿Quién dijo que no puedes divertirte de vez en cuando? La popular serie de videojuegos Animal Crossing llega ahora al mundo de la moda. Estas zapatillas de caña baja Wild Rider tienen un diseño gráfico serigrafiado que se entrecruza con la clásica franja PUMA translúcida de PUMA. Estamos seguros que llamarán la atención en todas partes. Incorpora un gráfico bordado de Animal Crossing en el talón y una pestaña en los cordones con el icónico logotipo PUMA Cat y la conocida hoja de Animal Crossing, que aportan con los detalles de estilo final a unas zapatillas que son únicas.",
+            "price": 21999,
+            "stock": 17,
+            "categoy": "footwear",
+            "images": [
+                {
+                    "0": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/382961/01/sv01/fnd/ARG/fmt/png",
+                    "1": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/382961/01/fnd/ARG/fmt/png",
+                    "2": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/382961/01/sv03/fnd/ARG/fmt/png",
+                    "3": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1536,h_1536/global/382961/01/sv04/fnd/ARG/fmt/png"
+                }
+            ]
+        }
+        
+    }
+]
