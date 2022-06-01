@@ -26,8 +26,7 @@ function MainDisplay() {
             })
             
         },[])
-    
-        console.log(products)
+        //console.log(products)
 
     // useEffect(() => {
     // const firestoreFetch = async () => {

@@ -64,6 +64,7 @@ body .aside {
   top: auto;
   left: 0;
   right: 0;
+  transition: all 0.3s ease-out;
 }
 body .aside .aside-ul {
   display: flex;

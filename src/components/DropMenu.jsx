@@ -3,7 +3,7 @@ import React from 'react'
 function DropMenu(props) {
     if (props.show == true) {
         return (
-        <aside id="menuDisplay" className="aside">
+        <aside id="menuDisplay" className="aside" visibility='visible' >
             <ul className="aside-ul">
                 <li className="aside-ul__li">
                     <a className="aside-ul__li_btn">Inicio</a>
@@ -20,6 +20,12 @@ function DropMenu(props) {
                 
             </ul>
         </aside>
+        )
+    }else{
+        return(
+            <aside visibility='hidden'>
+
+            </aside>
         )
     }
 }
