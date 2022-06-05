@@ -90,6 +90,7 @@ body .aside .aside-ul .aside-ul__li .aside-ul__li_btn {
 body .aside .aside-ul .aside-ul__li .aside-ul__li_btn:hover, body .aside .aside-ul .aside-ul__li .aside-ul__li_btn:active {
   color: rgb(64, 64, 64);
   transition: all 0.5s;
+  cursor: pointer;
 }
 body .aside .aside-ul .aside-ul__li input {
   padding: 0.4rem;

@@ -9,6 +9,7 @@ function App() {
         <NavBar/>
         <Routes>
           <Route path="/" element={<MainDisplay/>}/>
+          <Route path="category/:idCategory" element={<MainDisplay/>}/>
         
         </Routes>
       </div>

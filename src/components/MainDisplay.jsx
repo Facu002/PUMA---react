@@ -1,14 +1,21 @@
 import React from 'react'
 import { useEffect , useState } from 'react';
 import {db} from './firebaseConfig'
-import {collection, query, getDocs,docRef, getFirestore, doc, QuerySnapshot} from 'firebase/firestore'
+import { useParams } from 'react-router-dom'
+import {collection, query, getDocs,where , getFirestore, doc, QuerySnapshot} from 'firebase/firestore'
 import Item from './Item'
 import css from '../styles/style.css'
 function MainDisplay() {
-    const [loading, setLoading] = useState(true)
     const [products, setProducts] = useState([])    
 
-    const colRef = collection(db, 'products')
+    let {idCategory} = useParams()  
+
+    let colRef 
+    if (idCategory) {
+        colRef = query(collection(db, "products"), where('category', '==', idCategory));
+    } else {
+        colRef = query(collection(db, "products"));
+    }
     useEffect(()=>{
 
         // get collection data
@@ -25,23 +32,9 @@ function MainDisplay() {
                 console.log(err.message)
             })
             
-        },[])
+        },[idCategory])
         //console.log(products)
 
-    // useEffect(() => {
-    // const firestoreFetch = async () => {
-        
-    //     const q =  query(collection(db, "products"));
-    //     const querySnapshot = await getDocs(q);
-    //     const dataFromFirestore = querySnapshot.docs.map(document => (document.data()));
-    //     return dataFromFirestore;
-
-    // }
-    // firestoreFetch()
-    // .then(result => setProducts(result))
-    // .catch(e => console.log(e))
-    // console.log(products)
-    // }, [])
 
     return(
         <div className='main'>

@@ -83,13 +83,13 @@ body{
 
                 .aside-ul__li_btn{
                     text-decoration: none;
-                    color: #000;
+                    color: #000;    
 
                     &:hover,
                     &:active{
                         color: rgb(64, 64, 64);
                         transition: all 0.5s;
-
+                        cursor: pointer;
                     }
                 }
                 input{
