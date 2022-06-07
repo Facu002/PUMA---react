@@ -2,9 +2,12 @@ import {React, useState} from 'react'
 import DropMenu from "./DropMenu";
 import DropCategories from './DropCategories';
 import logoPuma from '../img/puma.svg'
+import { useParams } from 'react-router-dom';
+
 function NavBar() {
     const [Menu, setMenu] = useState(false)
     const [Categories, setCategories] = useState(false)
+    let {idCategory} = useParams()  
 
     function openMenuCloseCategory() {
         setCategories(false)
@@ -14,6 +17,8 @@ function NavBar() {
         setMenu(false)
         setCategories(!Categories)
     }
+
+    
     return (
         <>
         <div className='NavBar'>
@@ -23,7 +28,7 @@ function NavBar() {
                     <button id="menu" onClick={()=>openMenuCloseCategory()} className="nav-display_btn">MENU</button> 
                     <button id="categories" onClick={()=>openCategoryCloseMenu()} className="nav-display_btn">CATEGORIAS</button> 
                 </div>
-            <hr></hr>
+            {/* <hr></hr> */}
         </div>
 
         <DropMenu show={Menu}/>

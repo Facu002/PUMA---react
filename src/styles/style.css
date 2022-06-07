@@ -17,22 +17,24 @@ body {
 body .NavBar {
   height: 12rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: white;
+  border: 1px solid red;
 }
 body .NavBar .puma-logo {
   width: 8rem;
+  border: 1px solid red;
 }
 body .NavBar hr {
-  width: 100%;
+  width: 80%;
   margin: 0;
 }
 body .NavBar .nav-display {
+  border: 1px solid red;
   width: 13rem;
   display: flex;
   flex-direction: row;
@@ -99,7 +101,6 @@ body .aside .aside-ul .aside-ul__li input {
 body .main {
   display: grid;
   grid-template-columns: repeat(3, 0.5fr);
-  border: 1px solid red;
   justify-items: center;
 }
 body .main .item-container {
