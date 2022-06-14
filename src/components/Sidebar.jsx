@@ -13,7 +13,8 @@ function Sidebar() {
             <ul>
                 <NavLink className='Side-Item' to="/">INICIO</NavLink>
 
-                <NavLink className='Side-Item' to="/" >BUSCAR</NavLink>
+                {/* <NavLink className='Side-Item' to="/" >BUSCAR</NavLink> */}
+                <input className='Side-Item Side-Search' type="text" placeholder="Buscar.." />
 
                 <a className='Side-Item' onClick={()=>openCategory()} to="/">CATEGORIAS</a>
                 

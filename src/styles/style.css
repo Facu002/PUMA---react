@@ -9,31 +9,36 @@ body {
   padding: 0;
 }
 body .nav {
-  background-color: #2B2D42;
+  background-color: black;
 }
 body .nav .puma-logo {
-  width: 8rem;
+  width: 6rem;
+  margin: 0.5rem 1rem;
 }
 body .flex {
   display: flex;
 }
-body .Sidebar {
+body .flex .Sidebar {
   margin-left: 0.5rem;
 }
-body .Sidebar ul {
+body .flex .Sidebar ul {
   display: flex;
   flex-direction: column;
   padding: 0;
 }
-body .Sidebar ul .Side-Item {
+body .flex .Sidebar ul .Side-Item {
   padding: 0.8rem 1rem;
-  border: 1px solid goldenrod;
   list-style: none;
   text-decoration: none;
   color: black;
   cursor: pointer;
+  background-color: #EDF2F4;
 }
-body .Sidebar ul .Category-List {
+body .flex .Sidebar ul .Side-Search {
+  border: none;
+  -webkit-appearance: none;
+}
+body .flex .Sidebar ul .Category-List {
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -41,59 +46,105 @@ body .Sidebar ul .Category-List {
   opacity: 1;
   background-color: #EDF2F4;
 }
-body .Sidebar ul .CurrentCategory {
+body .flex .Sidebar ul .CurrentCategory {
   padding: 0.8rem 1.5rem;
-  border: 1px solid goldenrod;
   list-style: none;
   text-decoration: none;
   color: black;
   cursor: pointer;
   background-color: #8D99AE;
 }
-body .Sidebar ul .hidden {
+body .flex .Sidebar ul .hidden {
   display: none;
   opacity: 0;
 }
-body .content {
+body .flex .content {
   margin: 0 auto;
 }
-body .content .main {
+body .flex .content .main {
   display: grid;
   grid-template-columns: repeat(3, 0.5fr);
+  gap: 15px;
   justify-items: center;
+  margin-top: 10px;
 }
-body .content .main .item-container {
+body .flex .content .main .item-container {
   text-align: center;
-  font-size: medium;
 }
-body .content .main .item-container img {
+body .flex .content .main .item-container h1 {
+  margin: 0 auto;
+  font-weight: 200;
+  width: 80px;
+}
+body .flex .content .main .item-container img {
   width: 150px;
   height: 150px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 680px) {
   body {
     margin: 0;
     box-sizing: border-box;
     width: 100%;
-    background-color: #823b47;
   }
-  body .content {
+  body .nav {
+    text-align: center;
+    background-color: black;
+  }
+  body .nav .puma-logo {
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+  }
+  body .flex {
+    display: block;
+  }
+  body .flex .Sidebar {
+    margin: 0;
+  }
+  body .flex .Sidebar ul a {
+    border: none;
+    border-bottom: 1px solid #2B2D42;
+    text-align: center;
+  }
+  body .flex .Sidebar ul a:last-child {
+    border: none;
+  }
+  body .flex .Sidebar ul a:hover, body .flex .Sidebar ul a:active {
+    transition: all 0.5s;
+    background-color: #8D99AE;
+  }
+  body .flex .Sidebar ul .Category-List a {
+    border: none;
+  }
+  body .flex .Sidebar ul .Category-List a:last-child {
+    border-bottom: 1px solid #2B2D42;
+  }
+  body .flex .content {
     margin: 0 auto;
   }
-  body .content .main {
+  body .flex .content .main {
     display: grid;
     grid-template-columns: repeat(2, minmax(130px, 0.3fr));
     justify-content: center;
+    gap: 5px;
     margin: 0 auto;
   }
-  body .content .main .item-container {
+  body .flex .content .main .item-container {
     text-align: center;
-    font-weight: 200;
+    margin: 10px 0;
   }
-  body .content .main .item-container img {
-    width: 120px;
-    height: 120px;
+  body .flex .content .main .item-container h1 {
+    margin: 0 auto;
+    font-weight: 200;
+    font-size: xx-small;
+    width: 80px;
+  }
+  body .flex .content .main .item-container img {
+    width: 5vw;
+    height: 5vw;
+    min-width: 100px;
+    min-height: 100px;
   }
 }
 @media (min-width: 750px) {

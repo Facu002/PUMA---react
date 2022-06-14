@@ -1,5 +1,5 @@
 import React from 'react'
-import logoPuma from '../img/puma.svg'
+import logoPuma from '../img/puma-logo-png-26.png'
 
 function Nav() {
   return (

@@ -14,90 +14,149 @@ body{
     box-sizing: border-box;
     padding: 0;
     .nav{
-        background-color: #2B2D42;
+        background-color: black;
+
         .puma-logo{
-            width: 8rem;
+            width: 6rem;
+            margin: 0.5rem 1rem;
         }
     }
     .flex{
         display: flex;
-    }
-    .Sidebar{
-        margin-left: 0.5rem;
-        ul{
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-
-            .Side-Item{
-                padding: 0.8rem 1rem;
-                border: 1px solid goldenrod;
-                list-style: none;
-                text-decoration: none;
-                color: black;
-                cursor: pointer;
-            }
-            .Category-List{
-                padding: 0;
+        .Sidebar{
+            margin-left: 0.5rem;
+            ul{
                 display: flex;
                 flex-direction: column;
-                transition: all 2s;
-                opacity: 1;
-                background-color: $light-gray;
-            }
-            .CurrentCategory{
-                padding: 0.8rem 1.5rem;
-                border: 1px solid goldenrod;
-                list-style: none;
-                text-decoration: none;
-                color: black;
-                cursor: pointer;
-                background-color: $light-blue;
-            }
-            .hidden{
-                display: none;
-                opacity: 0;
+                padding: 0;
+
+                .Side-Item{
+                    padding: 0.8rem 1rem;
+                    list-style: none;
+                    text-decoration: none;
+                    color: black;
+                    cursor: pointer;
+                    background-color: $light-gray;
+                    
+                }
+                .Side-Search{
+                    border: none;
+                    -webkit-appearance: none;
+                }
+                .Category-List{
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    transition: all 2s;
+                    opacity: 1;
+                    background-color: $light-gray;
+                }
+                .CurrentCategory{
+                    padding: 0.8rem 1.5rem;
+                    list-style: none;
+                    text-decoration: none;
+                    color: black;
+                    cursor: pointer;
+                    background-color: $light-blue;
+                }
+                .hidden{
+                    display: none;
+                    opacity: 0;
+                }
             }
         }
-    }
-    // 
-    .content{
-        margin: 0 auto;
-        .main{
-            display: grid;
-            grid-template-columns: repeat(3, 0.5fr);
-            justify-items: center;
-            .item-container{
-                text-align: center;
-                font-size: medium;
-                img{
-                width: 150px;
-                height: 150px;
+        // 
+        .content{
+            margin: 0 auto;
+            .main{
+                display: grid;
+                grid-template-columns: repeat(3, 0.5fr);
+                gap: 15px;
+                justify-items: center;
+                margin-top: 10px;
+                .item-container{
+                    text-align: center;
+                    h1{
+                        margin: 0 auto;
+                        font-weight: 200;
+                        width: 80px;
+                    }
+                    img{
+                    width: 150px;
+                    height: 150px;
+                    }
                 }
             }
         }
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 680px) {
     body{
         margin: 0;
         box-sizing: border-box;
         width: 100%;
-        background-color: #823b47;
-        .content{
-            margin: 0 auto;
-            .main{
-                display: grid;
-                grid-template-columns: repeat(2, minmax(130px, 0.3fr));
-                justify-content: center;
+        .nav{
+            text-align: center;
+            background-color: black;
+            .puma-logo{
+                padding: 10px;
+                height: 50px;
+                width: 50px;
+            }
+        }
+        .flex{
+            display: block;
+            .Sidebar{
+                margin: 0;
+                ul{
+                    a{  
+                        border: none;
+                        border-bottom: 1px solid $blue;
+                        text-align: center;
+                        &:last-child{
+                            border: none;
+                        }
+                        &:hover,
+                        &:active{
+                            transition: all 0.5s;
+                            background-color: $light-blue;
+                        }
+                    }
+                    .Category-List{
+                        a{
+                            border: none;
+                            &:last-child{
+                                border-bottom: 1px solid $blue;
+
+                            }
+                        }
+                    }
+                }
+            }
+            .content{
                 margin: 0 auto;
-                .item-container{
-                    text-align: center;
-                    font-weight: 200;
-                    img{
-                    width: 120px;
-                    height: 120px;
+                .main{
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(130px, 0.3fr));
+                    justify-content: center;
+                    gap: 5px;
+                    margin: 0 auto;
+                    .item-container{
+                        text-align: center;
+                        margin: 10px 0;
+                        h1{
+                            margin: 0 auto;
+                            font-weight: 200;
+                            font-size: xx-small;
+                            width: 80px;
+                        }
+                        img{
+                        width: 5vw;
+                        height: 5vw;
+                        min-width: 100px;
+                        min-height: 100px;
+                        }
                     }
                 }
             }
@@ -112,7 +171,6 @@ body{
         width: 100%;
     }
 }
-
 @media (min-width: 1000px) {
     body{
         margin: 0;
