@@ -94,6 +94,9 @@ body .flex .content .main .item-container img {
   width: 150px;
   height: 150px;
 }
+body .itemDetail .imageShow {
+  width: 250px;
+}
 
 @media (max-width: 680px) {
   body {

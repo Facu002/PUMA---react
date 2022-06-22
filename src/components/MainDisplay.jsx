@@ -35,17 +35,19 @@ function MainDisplay() {
         },[idCategory])
         //console.log(products)
 
-
     return(
         <div className='main'>
             {
             products.map(item => 
                 <Item
-                key={item.id}
+                key={item.key}
                 name={item.name}
                 description={item.description}
                 thumbnail={item.thumb}
                 img={item.images}
+                stock={item.stock}
+                price={item.price}
+                index={item.key}
                 />
             )
             }

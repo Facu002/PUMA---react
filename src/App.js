@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
 import Categories from "./pages/Categories";
 import Home from "./pages/Home";
+import ItemDetail from "./components/ItemDetail";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import css from './styles/style.css'
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="category/:idCategory" element={<Categories/>}/>
+                <Route path="item/:id" element={<ItemDetail/>}/>
               </Routes>
           </div>
 
