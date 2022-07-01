@@ -16,11 +16,9 @@ function ItemDetail() {
             const docSnap = await getDoc(docRef);
                 
             if (docSnap.exists()) {
-                console.log("Document data:", docSnap.data());
                 setProducts(docSnap.data())
 
             } else {
-                // doc.data() will be undefined in this case
                 console.log("No such document!");
             }
         }
@@ -37,6 +35,7 @@ function ItemDetail() {
                 imgs={products.images}
                 stock={products.stock}
                 price={products.price}
+                size={products.size}
                 />
             : null
         }

@@ -68,11 +68,13 @@ body{
         // 
         .content{
             margin: 0 auto;
+            margin-left: 10px;
             .Banner{
                 text-align: center;
                 width: 100%;
                 height: 45%;
                 overflow: hidden;
+                margin: 0 auto;
                 .Banner-img__container{
                     white-space: nowrap;
                     .Banner-img{
@@ -105,8 +107,79 @@ body{
     }
 
     .itemDetail{
-        .imageShow{
-            width: 250px;
+        border: 1px solid red;
+        width: 70vw;
+        margin: 10px auto;
+        .itemPrimaryInfoContainer{
+            display: flex;
+            .imageContainer{
+                //margin: 0 auto;
+                display: flex;
+                border: 1px solid red;
+                flex-direction: column;
+                width: fit-content;
+                justify-content: center;
+                align-items: center;
+                .image-Show-Thumb{
+                    width: 35vw;
+                    min-width: 200px;
+                    border: 1px solid red;
+                }
+                .image-Collection{
+                    min-width: 200px;
+                    height: fit-content;
+                    border: 1px solid rgb(173, 76, 76);
+                    display: grid;
+                    grid-template-columns: repeat(3,30%);
+                    justify-content: space-around;
+                    .imageShow-Secondary{
+                        align-self: center;
+                        justify-self: center;
+                        border: 1px solid red;
+                        width: 10vw;
+                        min-width: 50px;
+                    }
+                }
+            }
+            .productInfoContainer{
+                border: 1px solid blue;
+                height: fit-content;
+                margin: 0 0 0 1.5rem;
+                max-width: 350px;
+                text-align: justify;
+                .productInfo-title{
+                    font-size: 25px;
+                    font-weight: 900;
+                    border: 1px solid blue;
+
+                }
+                .productInfo-price{
+                    font-weight: 800;
+                    font-size: 18px;
+                }
+                .productInfo-purchaseOptions{
+                    display: flex;
+                    justify-content: space-evenly;
+                    select{
+                        height: 2.5rem;
+                        border: none;
+                        border-radius: none;
+                        option{
+                            background-color: $light-gray;
+                            font-size: 14px;
+                        }
+                        &::after {
+                            option{
+                            border: 1px solid red;
+
+                            }
+                        }
+                    }
+                }
+            }
+            .productInfoContainer-mobile{
+                display: none;
+            }
         }
     }
 }
@@ -178,6 +251,53 @@ body{
                         min-height: 100px;
                         }
                     }
+                }
+            }
+        }
+        .itemDetail{
+            border: 1px solid blue;
+            width: 85vw;
+            margin: 0 auto;
+            .itemPrimaryInfoContainer{
+                display: block;
+                .imageContainer{
+                    margin: 0 auto;
+                    display: flex;
+                    border: 1px solid blue;
+                    flex-direction: column;
+                    width: fit-content;
+                    justify-content: center;
+                    align-items: center;
+                    .image-Show-Thumb{
+                        width: 35vw;
+                        min-width: 200px;
+                        border: 1px solid blue;
+                    }
+                    .image-Collection{
+                        min-width: 200px;
+                        height: fit-content;
+                        border: 1px solid rgb(173, 76, 76);
+                        display: grid;
+                        grid-template-columns: repeat(3,30%);
+                        justify-content: space-evenly;
+                        .imageShow-Secondary{
+                            align-self: center;
+                            justify-self: center;
+                            border: 1px solid blue;
+                            width: 10vw;
+                            min-width: 50px;
+                        }
+                    }
+                }
+                .productInfoContainer-mobile{
+                    display: block;
+                    border: 1px solid red;
+                    height: fit-content;
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+                .productInfoContainer{
+                    display: none;
                 }
             }
         }
