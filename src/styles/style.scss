@@ -3,7 +3,7 @@ $light-blue :#8D99AE;
 $light-gray:#EDF2F4;
 $light-red :#f0354b;
 $red :#D90429;
-
+$black : #181818;
 *{
     font-family: 'Noto Sans', sans-serif;
     font-size: 0.8rem;
@@ -13,6 +13,8 @@ body{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    height: auto;
+
     .nav{
         background-color: black;
 
@@ -72,13 +74,13 @@ body{
             .Banner{
                 text-align: center;
                 width: 100%;
-                height: 45%;
                 overflow: hidden;
                 margin: 0 auto;
                 .Banner-img__container{
                     white-space: nowrap;
                     .Banner-img{
                         width: 100%;
+                        height: 35%;
                         min-height: 90px;  
                         display: inline-block;
                     }
@@ -89,7 +91,7 @@ body{
                 grid-template-columns: repeat(3, 0.5fr);
                 gap: 15px;
                 justify-items: center;
-                margin-top: 10px;
+                margin: 10px 0;
                 .item-container{
                     text-align: center;
                     h1{
@@ -110,8 +112,12 @@ body{
         border: 1px solid red;
         width: 70vw;
         margin: 10px auto;
+        display: flex;
+        flex-direction: column;
         .itemPrimaryInfoContainer{
             display: flex;
+            padding: 0 0 0.5rem 0;
+            border-bottom: 1px solid $blue;
             .imageContainer{
                 //margin: 0 auto;
                 display: flex;
@@ -142,24 +148,41 @@ body{
                 }
             }
             .productInfoContainer{
-                border: 1px solid blue;
-                height: fit-content;
+                border: 1px solid rgb(68, 255, 0);
+                width: 100%;
                 margin: 0 0 0 1.5rem;
                 max-width: 350px;
                 text-align: justify;
+                display: flex;
+                flex-direction: column;
                 .productInfo-title{
                     font-size: 25px;
-                    font-weight: 900;
+                    font-weight: 700;
                     border: 1px solid blue;
 
                 }
-                .productInfo-price{
-                    font-weight: 800;
-                    font-size: 18px;
+                .productPrice{
+                    display: flex;
+                    flex-direction: column;
+                    border: 1px solid red;
+                    height: 80px;
+                    justify-content: space-evenly;
+                    span{
+                        font-weight: 300;
+                        font-size: 12px;
+                    }
+                    .productInfo-price{
+                        font-weight: 900;
+                        font-size: 18px;
+                        border: 1px solid blue;
+                        color: $blue;
+                    }
                 }
                 .productInfo-purchaseOptions{
                     display: flex;
                     justify-content: space-evenly;
+                    border: 1px solid blue;
+                    
                     select{
                         height: 2.5rem;
                         border: none;
@@ -176,9 +199,194 @@ body{
                         }
                     }
                 }
+                .productPurchase{
+                    border: 1px solid yellow;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 200px;
+                    button{
+                        width: 90%;
+                        padding: 10px;
+                        margin: 0 auto;
+                    }
+                }
             }
             .productInfoContainer-mobile{
                 display: none;
+            }
+        }
+        .itemSecondaryInfoContainer{
+            border: 1px solid blue;
+            margin: 1.5rem 0;
+            span{
+                font-size: 12px;
+                line-height: 25px;
+            }
+        }
+    }
+
+    .footerContainer{
+        background-color: $black;
+        padding-top: 1rem;
+        margin-bottom: 0;
+        .footerContainer-box{
+            
+            &__top{
+                height: 20vh;
+                display: flex;
+                width: 90%;
+                margin: 0 auto;
+                .footerLogo{
+                    height: 50%;
+                    margin: 1rem;
+                }
+                .inbox-container{
+                    display: flex;
+                    flex-direction: column;
+                    margin: auto 0 1rem auto;
+                    span{
+                        margin: 0 0 0.5rem 0;
+                        color: $light-gray;
+                        font-size: 12px;
+                    }
+                    .emailInput-container{
+                        display: flex;
+                        border: 1px solid $light-gray;
+                        width: 280px;
+                        input{
+                            width: 100%;
+                            padding: 1rem;
+                            background-color: $black;
+                            border: none;
+                            color: $light-gray;
+                            
+                            &:focus{
+                                outline:yellow solid 1px;
+                            }
+                        }
+                        button{
+                            background-color: $black;
+                            width: 50px;
+                            border: none;
+                            border-left: 0.5px solid $light-gray;
+                            .fa-arrow-right-long{
+                                color: $light-gray;
+                                width: 100%;
+                                padding: 0;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &__mid{
+                //border: 1px solid blue;
+                height: 45vh;
+                display: flex;
+                margin: 0 auto;
+                //margin: 0.5rem 2rem;
+                width: 90%;
+                .footer-mid_Column{
+                    width: 25%;
+                    max-width: 400px;
+                    h4{
+                        font-size: 13px;
+                        color: $light-gray;
+                    }
+                    hr{
+                        border: 1px solid $light-gray;
+                    }
+                    ul{
+                        padding: 0;
+                        li{
+                            list-style: none;
+                            margin: 10px 0;
+                            a{
+                                font-size: 12px;
+                                text-decoration: none;
+                                color: $light-gray;
+                                opacity: 0.3;
+                                &:hover{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+                .secondColumn{
+                    margin-left: 2rem;
+                }
+                .thirdColumn{
+                    width: 300px;
+                    margin: 0 0 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    height: 40vh;
+                    ul{
+                        a{
+                            text-decoration: none;
+                            color: $light-gray;
+                            .fa-facebook-square,.fa-instagram,
+                            .fa-twitter,.fa-youtube{
+                                color: $light-gray;
+                                height: 25px;
+                                margin:  1.2rem;
+                            } 
+                        }
+                    }
+                    .pumaTrac{
+                        margin: auto 0 0 0;
+                        ul{
+                            display: flex;
+                            align-items: center;
+                            justify-content: baseline;
+                            margin: 2rem 0 0 0;
+                            a{
+                                &:last-child{
+                                    text-transform: uppercase;
+                                    border-bottom: 2px solid $light-gray;
+                                    font-size: 11px;
+                                    margin: 0 1.5rem;
+                                    &:hover{
+                                        color: $light-gray;
+                                        border-bottom: 2px solid $light-red;
+                                        transition: 0.2s ease-in;
+                                    }
+                                }
+                                img{
+                                    
+                                    height: 60px;
+                                    border-radius: 15px;
+                                    border: 0.5px solid $light-gray;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__bot{
+                height: 20vh;
+                div{
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin: 2rem auto;
+                    select{
+                        width: 200px;
+                        border: 1px solid $light-gray;
+                        background-color: transparent;
+                        color: $light-gray;
+                        padding: 1rem;
+                        text-transform: uppercase;
+                    }
+                    span{
+                        color: $light-gray;
+                        font-size: 14px;
+                    }
+                }
             }
         }
     }
@@ -189,6 +397,7 @@ body{
         margin: 0;
         box-sizing: border-box;
         width: 100%;
+        height: auto;
         .nav{
             text-align: center;
             background-color: black;
@@ -301,14 +510,180 @@ body{
                 }
             }
         }
+        .footerContainer{
+            background-color: $black;
+            padding-top: 5rem;
+            margin-bottom: 0;
+            height: 100%;
+            .footerContainer-box{
+                
+                &__top{
+                    height: auto;
+                    width: 90%;
+                    display: block;
+                    margin: 0 auto;
+                    border-bottom: 3px solid $light-gray;
+                    .footerLogo{
+                        display: none;
+                    }
+                    .inbox-container{
+                        span{
+                            color: $light-gray;
+                            font-size: 12px;
+                        }
+                        .emailInput-container{
+                            border: 1px solid $light-gray;
+                            width: 100%;
+                            input{
+                                padding: 1rem;
+                                background-color: $black;
+                                border: none;
+                                color: $light-gray;
+                                
+                                &:focus{
+                                    outline:yellow solid 1px;
+                                }
+                            }
+                            button{
+                                background-color: $black;
+                                width: 50px;
+                                border: none;
+                                border-left: 0.5px solid $light-gray;
+                                .fa-arrow-right-long{
+                                    color: $light-gray;
+                                    width: 100%;
+                                    padding: 0;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__mid{
+                    height:auto;
+                    display: block;
+                    margin: 0 auto;
+                    //margin: 0.5rem 2rem;
+                    width: 90%;
+                    .footer-mid_Column{
+                        width: 100%;
+                        max-width: none;
+                        h4{
+                            font-size: 13px;
+                            color: $light-gray;
+                        }
+                        hr{
+                            border: 1px solid $light-gray;
+                            opacity: 0.8;
+                        }
+                        ul{
+                            padding: 0;
+                            li{
+                                list-style: none;
+                                margin: 10px 0;
+                                a{
+                                    font-size: 12px;
+                                    text-decoration: none;
+                                    color: $light-gray;
+                                    opacity: 0.3;
+                                    &:hover{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .secondColumn{
+                        margin: 0;
+                    }
+                    .thirdColumn{
+                        width: 100%;
+                        margin: 0 ;
+                        display: flex;
+                        flex-direction: column;
+                        height: auto;
+                        text-align: center;
+                        hr{
+                            display: none;
+                        }
+                        ul{
+                            a{
+                                text-decoration: none;
+                                color: $light-gray;
+                                .fa-facebook-square,.fa-instagram,
+                                .fa-twitter,.fa-youtube{
+                                    color: $light-gray;
+                                    height: 25px;
+                                    margin:  1.2rem;
+                                } 
+                            }
+                        }
+                        .pumaTrac{
+                            margin: 0;
+                            text-align: center;
+
+                            ul{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 2rem 0;
+                                a{
+                                    &:last-child{
+                                        text-transform: uppercase;
+                                        border-bottom: 2px solid $light-gray;
+                                        font-size: 11px;
+                                        margin: 0 1.5rem;
+                                        &:hover{
+                                            color: $light-gray;
+                                            border-bottom: 2px solid $light-red;
+                                            transition: 0.2s ease-in;
+                                        }
+                                    }
+                                    img{
+                                        
+                                        height: 60px;
+                                        border-radius: 15px;
+                                        border: 0.5px solid $light-gray;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &__bot{
+                    height: 20vh;
+                    div{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        select{
+                            width: 70%;
+                            border: 1px solid $light-gray;
+                            background-color: transparent;
+                            color: $light-gray;
+                            padding: 1rem;
+                            text-transform: uppercase;
+                        }
+                        span{
+                            color: $light-gray;
+                            font-size: 14px;
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+
+
 
 @media (min-width: 750px) {
     body{
         margin: 0;
         box-sizing: border-box;
         width: 100%;
+        height: auto;
     }
 }
 @media (min-width: 1000px) {
@@ -316,5 +691,7 @@ body{
         margin: 0;
         box-sizing: border-box;
         width: 100%;
+        height: auto;
+
     }
 }

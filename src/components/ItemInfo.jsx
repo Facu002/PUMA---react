@@ -4,7 +4,7 @@ function ItemInfo(props) {
   
   return (
       <div className='itemDetail'>
-        {
+        { 
         props.imgs  ?
                     
           <>
@@ -28,13 +28,23 @@ function ItemInfo(props) {
 
           <div className="productInfoContainer">
             <h1 className="productInfo-title">{props.name}</h1>
+
+            <div className="productPrice">
             <span className='productInfo-price'>${props.price}</span>
-            <SizeSelector stock={props.stock} size={props.size}></SizeSelector>
-          </div>
+            <span>6 cuotas sin interes a <br></br> <strong>${Math.round(props.price/6)}</strong></span>
+            </div>
+
+            <div className="productPurchase">
+              <SizeSelector stock={props.stock} size={props.size}></SizeSelector>
+              <button>COMPRAR</button>
+            </div>
 
           </div>
 
-          {/* <span>{props.description}</span> */}
+          </div>
+          <div className="itemSecondaryInfoContainer">
+            <span>{props.description}</span>
+          </div>
         </>
         : console.log('nada')
         }   
