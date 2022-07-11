@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SizeSelector from './SizeSelector'
+import ImageGallery from './ImageGallery'
 function ItemInfo(props) {
   
   return (
@@ -16,15 +17,8 @@ function ItemInfo(props) {
 
           </div>
 
-          <div className="imageContainer">
-            <img className='image-Show-Thumb' src={props.imgs[0]} alt='ok'></img>
-
-            <div className="image-Collection">
-              <img className='imageShow-Secondary' src={props.imgs[1]} alt="caca" />
-              <img className='imageShow-Secondary' src={props.imgs[2]} alt="caca" />
-              <img className='imageShow-Secondary' src={props.imgs[3]} alt="caca" />
-            </div>
-          </div>
+            <ImageGallery imgs={props.imgs}/>
+          
 
           <div className="productInfoContainer">
             <h1 className="productInfo-title">{props.name}</h1>
@@ -45,8 +39,9 @@ function ItemInfo(props) {
           <div className="itemSecondaryInfoContainer">
             <span>{props.description}</span>
           </div>
-        </>
-        : console.log('nada')
+          
+          </>
+        : console.log('no fetch')
         }   
       </div> 
     )
