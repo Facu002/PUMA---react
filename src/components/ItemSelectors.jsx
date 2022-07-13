@@ -1,6 +1,6 @@
 import {React, useEffect, useState} from 'react'
 
-function SizeSelector(props) {
+function ItemSelectors(props) {
     const [size, setSize] = useState([])
     const [quantity, setquantity] = useState([])
 
@@ -10,7 +10,7 @@ function SizeSelector(props) {
         setquantity(props.stock)
     }, [])
     function fillWebsitePlaceFiller(times) {
-        for (var number = 1; number < 8; number++) {
+        for (var number = 1; number < 5; number++) {
             arr.push(number)
         }
     }
@@ -31,4 +31,4 @@ function SizeSelector(props) {
 
 }
 
-export default SizeSelector
+export default ItemSelectors

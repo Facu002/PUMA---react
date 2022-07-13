@@ -87,10 +87,13 @@ body .flex .content .main {
 }
 body .flex .content .main .item-container {
   text-align: center;
+  text-decoration: none;
+  color: #181818;
 }
 body .flex .content .main .item-container h1 {
   margin: 0 auto;
-  font-weight: 200;
+  font-size: 12px;
+  font-weight: 400;
   width: 80px;
 }
 body .flex .content .main .item-container img {
@@ -98,7 +101,6 @@ body .flex .content .main .item-container img {
   height: 150px;
 }
 body .itemDetail {
-  border: 1px solid red;
   width: 70vw;
   margin: 10px auto;
   display: flex;
@@ -111,7 +113,6 @@ body .itemDetail .itemPrimaryInfoContainer {
 }
 body .itemDetail .itemPrimaryInfoContainer .imageContainer {
   display: flex;
-  border: 1px solid red;
   flex-direction: column;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -122,14 +123,12 @@ body .itemDetail .itemPrimaryInfoContainer .imageContainer {
 body .itemDetail .itemPrimaryInfoContainer .imageContainer .imageShow-Thumb {
   width: 35vw;
   min-width: 200px;
-  border: 1px solid red;
 }
 body .itemDetail .itemPrimaryInfoContainer .imageContainer .image-Collection {
   min-width: 200px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  border: 1px solid rgb(173, 76, 76);
   display: grid;
   grid-template-columns: repeat(3, 30%);
   justify-content: space-around;
@@ -137,12 +136,10 @@ body .itemDetail .itemPrimaryInfoContainer .imageContainer .image-Collection {
 body .itemDetail .itemPrimaryInfoContainer .imageContainer .image-Collection .imageShow-Secondary {
   align-self: center;
   justify-self: center;
-  border: 1px solid red;
   width: 10vw;
   min-width: 50px;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer {
-  border: 1px solid rgb(68, 255, 0);
   width: 100%;
   margin: 0 0 0 1.5rem;
   max-width: 350px;
@@ -151,31 +148,35 @@ body .itemDetail .itemPrimaryInfoContainer .productInfoContainer {
   flex-direction: column;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productInfo-title {
-  font-size: 25px;
-  font-weight: 700;
-  border: 1px solid blue;
+  font-size: 22px;
+  font-weight: 500;
+  border-bottom: 1px solid #8D99AE;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPrice {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   height: 80px;
   justify-content: space-evenly;
+  border-bottom: 1px solid #8D99AE;
+}
+body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPrice .strg {
+  font-size: 14px;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPrice span {
   font-weight: 300;
   font-size: 12px;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPrice .productInfo-price {
-  font-weight: 900;
-  font-size: 18px;
-  border: 1px solid blue;
-  color: #2B2D42;
+  font-weight: 700;
+  font-size: 25px;
+  width: 50%;
+  border-bottom: 1px solid #8D99AE;
+  font-family: "Nunito", sans-serif;
+  color: #4675B9;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productInfo-purchaseOptions {
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid blue;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productInfo-purchaseOptions select {
   height: 2.5rem;
@@ -190,12 +191,13 @@ body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productInfo-pu
   border: 1px solid red;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPurchase {
-  border: 1px solid yellow;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 200px;
+  margin: 1rem 0 0 0;
+  background-color: #EDF2F4;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPurchase button {
   width: 90%;
@@ -206,7 +208,6 @@ body .itemDetail .itemPrimaryInfoContainer .productInfoContainer-mobile {
   display: none;
 }
 body .itemDetail .itemSecondaryInfoContainer {
-  border: 1px solid blue;
   margin: 1.5rem 0;
 }
 body .itemDetail .itemSecondaryInfoContainer span {
@@ -292,7 +293,7 @@ body .footerContainer .footerContainer-box__top .inbox-container .emailInput-con
   color: #EDF2F4;
 }
 body .footerContainer .footerContainer-box__top .inbox-container .emailInput-container input:focus {
-  outline: yellow solid 1px;
+  outline: #4675B9 solid 1px;
 }
 body .footerContainer .footerContainer-box__top .inbox-container .emailInput-container button {
   background-color: #181818;
@@ -416,7 +417,7 @@ body .footerContainer .footerContainer-box__bot div span {
   }
   body .nav {
     text-align: center;
-    background-color: black;
+    background-color: #181818;
   }
   body .nav .puma-logo {
     padding: 10px;
@@ -598,7 +599,7 @@ body .footerContainer .footerContainer-box__bot div span {
     color: #EDF2F4;
   }
   body .footerContainer .footerContainer-box__top .inbox-container .emailInput-container input:focus {
-    outline: yellow solid 1px;
+    outline: #4675B9 solid 1px;
   }
   body .footerContainer .footerContainer-box__top .inbox-container .emailInput-container button {
     background-color: #181818;
