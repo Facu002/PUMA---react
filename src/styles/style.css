@@ -177,18 +177,20 @@ body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPrice .
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productInfo-purchaseOptions {
   display: flex;
   justify-content: space-evenly;
+  text-align: justify;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productInfo-purchaseOptions select {
   height: 2.5rem;
   border: none;
-  border-radius: none;
+  border-radius: 5px;
+  width: 6rem;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productInfo-purchaseOptions select option {
   background-color: #EDF2F4;
   font-size: 14px;
 }
-body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productInfo-purchaseOptions select::after option {
-  border: 1px solid red;
+body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productInfo-purchaseOptions select:hover::after {
+  color: #F39C12;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPurchase {
   text-align: center;
@@ -197,12 +199,22 @@ body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPurchas
   justify-content: space-evenly;
   height: 200px;
   margin: 1rem 0 0 0;
-  background-color: #EDF2F4;
+  background-color: #8D99AE;
 }
-body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPurchase button {
-  width: 90%;
+body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPurchase .productInfo-purchaseBtn {
+  width: 80%;
   padding: 10px;
   margin: 0 auto;
+  background-color: #EDF2F4;
+  border: none;
+  border-radius: 5px;
+  color: #4675B9;
+  font-weight: 700;
+  cursor: pointer;
+}
+body .itemDetail .itemPrimaryInfoContainer .productInfoContainer .productPurchase .productInfo-purchaseBtn:hover {
+  background-color: #4675B9;
+  color: #EDF2F4;
 }
 body .itemDetail .itemPrimaryInfoContainer .productInfoContainer-mobile {
   display: none;
@@ -406,6 +418,23 @@ body .footerContainer .footerContainer-box__bot div select {
 body .footerContainer .footerContainer-box__bot div span {
   color: #EDF2F4;
   font-size: 14px;
+}
+body .cart-container {
+  background-color: #F39C12;
+  width: 70vw;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+body .cart-container .productInCart-container {
+  width: 50vw;
+  background-color: #4675B9;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+body .cart-container .productInCart-container .productInCart-image {
+  width: 100px;
 }
 
 @media (max-width: 680px) {

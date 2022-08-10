@@ -1,8 +1,18 @@
 import React, { useState } from 'react'
 import ItemSelectors from './ItemSelectors'
 import ImageGallery from './ImageGallery'
+import { useContext } from 'react';
+import {CartContext} from '../context/Context';
 function ItemInfo(props) {
-  
+  const [productsInCart, setProductsInCart] = useState(0)
+
+  const context = useContext(CartContext)
+
+  let onAdd = (num, sizeSelected) => {
+    setProductsInCart(num)
+    context.addItem(props, num, sizeSelected)
+
+}
   return (
       <div className='itemDetail'>
         { 
@@ -18,7 +28,6 @@ function ItemInfo(props) {
           </div>
 
             <ImageGallery imgs={props.imgs}/>
-          
 
           <div className="productInfoContainer">
             <h1 className="productInfo-title">{props.name}</h1>
@@ -29,8 +38,7 @@ function ItemInfo(props) {
             </div>
 
             <div className="productPurchase">
-              <ItemSelectors stock={props.stock} size={props.size}></ItemSelectors>
-              <button>COMPRAR</button>
+              <ItemSelectors price={props.price} stock={props.stock} size={props.size} onPurchase={onAdd}></ItemSelectors>
             </div>
 
           </div>

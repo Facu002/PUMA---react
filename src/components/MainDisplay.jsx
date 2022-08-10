@@ -40,7 +40,7 @@ function MainDisplay() {
             {
             products.map(item => 
                 <Item
-                key={item.key}
+                key={item.name}
                 name={item.name}
                 description={item.description}
                 thumbnail={item.thumb}

@@ -22,6 +22,8 @@ function Sidebar() {
 
                 <NavLink className='Side-Item' to="/" >PREGUNTAS</NavLink>
 
+                <NavLink className='Side-Item' to="/cart" >CARRITO</NavLink>
+
             </ul>
         </div>
     )

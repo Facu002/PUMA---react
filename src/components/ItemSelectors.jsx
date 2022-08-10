@@ -1,32 +1,54 @@
 import {React, useEffect, useState} from 'react'
 
 function ItemSelectors(props) {
-    const [size, setSize] = useState([])
-    const [quantity, setquantity] = useState([])
+    //const [size, setSize] = useState([])
+    const [selectedQuantity, setSelectedQuantity] = useState()
+
+    const [selectedSize, setSelectedSize] = useState();
 
     let arr = []
-    useEffect(() => {
-        setSize(props.size)
-        setquantity(props.stock)
-    }, [])
-    function fillWebsitePlaceFiller(times) {
-        for (var number = 1; number < 5; number++) {
+    let sizeOptions = (props.size)
+
+    
+    function productStock(){
+        for (var number = 1; number < 6; number++) {
             arr.push(number)
         }
     }
 
+    function AddProductToCart() {
+        if (selectedQuantity !== undefined && selectedSize !== undefined) {
+            props.onPurchase(parseInt(selectedQuantity, 10), selectedSize)
+        }else{
+            console.log('nonono')
+        }
+    }
+
     return (
+        <>
         <div className='productInfo-purchaseOptions'>
-            <select className='purchaseOptions-size' name="select" id="size">
-                <option>TALLE</option>
-                {size.map( (sizeValue)=>(<option key={sizeValue}>{sizeValue}</option>))}
-            </select>
-            <select className='purchaseOptions-stock' name="select" id="stock">
-                <option>CANTIDAD</option>
-                {fillWebsitePlaceFiller(quantity)}
-                {arr.map((qnty)=>(<option key={qnty}>{qnty}</option>))}
-            </select>
+            <div>
+                <h4>TALLE</h4>
+                <select className='purchaseOptions-size' name="select" id="size" onChange={(e) => setSelectedSize(e.target.value)}>
+                    <option>Talles</option>
+                    {sizeOptions.map( (sizeValue)=>(<option key={sizeValue}>{sizeValue}</option>))}
+                </select>
+            </div>
+            <div>
+                <h4>TALLE</h4>
+                <select className='purchaseOptions-stock' name="select" id="stock" 
+                onChange={(e) => setSelectedQuantity(e.target.value)} >
+                    
+                    {productStock()}
+                    <option>Cantidad</option>
+                    {arr.map((qnty)=>(<option key={qnty}>{qnty}</option>))}
+                </select>
+            </div>
         </div>
+
+        <button className='productInfo-purchaseBtn' onClick={() => AddProductToCart()}>Agregar al carrito</button>
+        
+        </>
     )
 
 }
