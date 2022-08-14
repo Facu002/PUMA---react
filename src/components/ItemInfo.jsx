@@ -33,14 +33,18 @@ function ItemInfo(props) {
             <h1 className="productInfo-title">{props.name}</h1>
 
             <div className="productPrice">
-            <span className='productInfo-price'>$ {props.price}</span>
-            <span>6 cuotas sin interes a <br></br> <strong className='strg'>$ {Math.round(props.price/6)}</strong></span>
+              <span className='productInfo-price'>$ {props.price}</span>
+              <span>6 cuotas sin interes a <br></br> <strong className='strg'>$ {Math.round(props.price/6)}</strong></span>
             </div>
 
             <div className="productPurchase">
               <ItemSelectors price={props.price} stock={props.stock} size={props.size} onPurchase={onAdd}></ItemSelectors>
             </div>
 
+          </div>
+
+          <div className="productPurchase-mobile">
+              <ItemSelectors price={props.price} stock={props.stock} size={props.size} onPurchase={onAdd}></ItemSelectors>
           </div>
 
           </div>

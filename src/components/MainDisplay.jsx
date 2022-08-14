@@ -36,7 +36,7 @@ function MainDisplay() {
 
     return(
         <>
-        <input placeholder="Enter Post Title" onChange={event => setSearchBarValue(event.target.value)} />
+        <input placeholder="Buscar producto..." className='search-products' onChange={event => setSearchBarValue(event.target.value)} />
         
         <div className='main'>
             {
@@ -49,14 +49,14 @@ function MainDisplay() {
                     }
                 }).map((item, index) =>
                     <Item
-                    key={index}
+                    key={item.id}
                     name={item.name}
                     description={item.description}
                     thumbnail={item.thumb}
                     img={item.images}
                     stock={item.stock}
                     price={item.price}
-                    //index={item.key}
+                    index={item.key}
                     />
                     )
             }

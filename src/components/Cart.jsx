@@ -34,30 +34,36 @@ function Cart() {
 
     return (
     <div className='cart-container'>
+        <div className='productInCart-container'>
     {
     context.cartList.length > 0 && (
         context.cartList.map(product =>
-            <div className='productInCart-container'>
-            <img className='productInCart-image' src={product.imageItem} alt="" />
+        
+            <div className="productInCart-itemContainer">
+                <img className='productInCart-image' src={product.imageItem} alt="" />
 
-            <h1>{product.nameItem}</h1>
-
-            <span>${product.costItem}</span>
-            <h2>x{product.numItem}</h2>
-            
-            <span>{product.sizeItem}</span>
-            {/* <h3>{product.costItem * product.numItem}</h3> */}
+                <div className="productInCart-textInfo">
+                    <h1>{product.nameItem}</h1>
+                    <div className='productInCart-textInfo__price'>
+                        <h2>${product.costItem}</h2>
+                        <span>x {product.numItem}</span>
+                    </div>
+                    <div className="productInCart-textInfo__size">
+                        <h2>Talle: </h2>
+                        <span> {product.sizeItem}</span>
+                    </div>
+                </div>
 
             </div>) 
-        
-    )
+        )
     }
+        </div>
         {
         context.cartList.length > 0 &&
-        <>
-        <h1>Precio a Pagar: ${context.totalPurchase()}</h1>
-        <button >Terminar Compra</button>
-        </>
+        <div className='cartPurchase-container'>
+            <h1 className='cart-finalPrice'>Precio a Pagar: ${context.totalPurchase()}</h1>
+            <button className='cart-finalPurchase'>Terminar Compra</button>
+        </div>
         }
     </div>
     )

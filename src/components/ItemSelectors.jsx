@@ -35,7 +35,7 @@ function ItemSelectors(props) {
                 </select>
             </div>
             <div>
-                <h4>TALLE</h4>
+                <h4>CANTIDAD</h4>
                 <select className='purchaseOptions-stock' name="select" id="stock" 
                 onChange={(e) => setSelectedQuantity(e.target.value)} >
                     
