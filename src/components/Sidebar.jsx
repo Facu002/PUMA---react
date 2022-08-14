@@ -2,8 +2,11 @@ import {React, useState} from 'react'
 import {NavLink} from 'react-router-dom'
 import CategoriesList from './CategoriesList'
 import css from '../styles/style.css'
+import { useContext } from 'react';
+import { CartContext } from '../context/Context';
 function Sidebar() {
     const [Categories, setCategories] = useState(false)
+    const context = useContext(CartContext)
 
     const  openCategory = () => {
         setCategories(!Categories)
@@ -19,7 +22,7 @@ function Sidebar() {
                 <CategoriesList show={Categories}/>
 
 
-                <NavLink className='Side-Item' to="/cart" >CARRITO</NavLink>
+                <NavLink className='Side-Item' to="/cart" >CARRITO ({context.totalItems()})</NavLink>
 
             </ul>
         </div>

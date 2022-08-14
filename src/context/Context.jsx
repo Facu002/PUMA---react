@@ -34,8 +34,19 @@ const  CartContextProvider = ({children}) => {
         return total.reduce((n, totalCost ) => n + totalCost, 0)
     }
 
+    const removeProduct = (i)=>{
+        let filtered = cartList.filter(item => item !== i)
+        setCartList(filtered)
+    }
+    const totalItems  = () =>{
+        let items = cartList.map(item => item.numItem);
+        return items.reduce(
+            ((acc, curr) => acc + curr)
+            , 0);
+    }
+
     return(
-        <CartContext.Provider value={{cartList, addItem, totalPurchase}}>
+        <CartContext.Provider value={{cartList, addItem, totalPurchase, removeProduct, totalItems}}>
             {children}
         </CartContext.Provider>
     )

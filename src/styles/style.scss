@@ -481,9 +481,11 @@ body{
             .productInCart-itemContainer{
                 width: 70vw;
                 background-color: $light-gray;
+                flex-direction: row;
                 display: flex;
                 align-items: center;
-                margin: 10px auto;
+                justify-content: space-around;
+                margin: 5px auto;
                 max-width: 900px;
                 border-bottom: 1px solid $cyan;
                 .productInCart-image{
@@ -523,6 +525,19 @@ body{
                             font-weight: 700;
                         }
 
+                    }
+                }
+                .productInCart-remove{
+                    background-color: $red;
+                    color: #ffff;
+                    border: none;
+                    padding: 3px 5px;
+                    border-radius: 3px;
+                    margin: 0 10px 0 0;
+                    &:hover,
+                    &:active{
+                        background-color: $light-red;
+                        cursor: pointer;
                     }
                 }
             }

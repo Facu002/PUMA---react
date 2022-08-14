@@ -53,6 +53,7 @@ function Cart() {
                         <span> {product.sizeItem}</span>
                     </div>
                 </div>
+                <button className='productInCart-remove' onClick={() => context.removeProduct(product)}>X</button>
 
             </div>) 
         )
