@@ -5,9 +5,34 @@ $light-red :#f0354b;
 $red :#D90429;
 $black : #181818;
 $cyan: #4675B9;
+$yellow: #F39C12;
+$green: #31c774;
+$light-green: #baffd9;
+
 *{
     font-family: 'Noto Sans', sans-serif;
     font-size: 0.8rem;
+    @keyframes addToCartBtn {
+        0%{
+            // background-color: $light-blue;
+            // background-position: -200px;
+            background: linear-gradient(to right, $light-green 50%, $light-gray 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            color: transparent;
+        }
+        100%{
+            // background-color: $light-green;
+            // background-position: -100px;
+            // background-size: 1px;
+            background: linear-gradient(to right, $light-green 50%, $light-gray 50%);
+            background-size: 200% 100%;
+            background-position: left bottom;
+            color: transparent;
+
+        }
+
+    }
 }
 
 body{
@@ -18,13 +43,12 @@ body{
 
     .nav{
         background-color: black;
-
         .puma-logo{
             width: 6rem;
             margin: 0.5rem 1rem;
         }
     }
-    .flex{
+    .WebContainerWrap{
         display: flex;
         justify-content: flex-end;
         .Sidebar{
@@ -76,14 +100,14 @@ body{
             margin-left: 10px;
             width: 100%;
 
-            .Banner{
+            .banner{
                 text-align: center;
                 width: 100%;
                 overflow: hidden;
                 margin: 0 auto;
-                .Banner-img__container{
+                .banner-img__container{
                     white-space: nowrap;
-                    .Banner-img{
+                    .banner-img{
                         width: 100%;
                         height: 35%;
                         min-height: 90px;  
@@ -126,7 +150,6 @@ body{
     }
 
     .itemDetail{
-        //border: 1px solid red;
         width: 70vw;
         margin: 10px auto;
         display: flex;
@@ -136,36 +159,42 @@ body{
             padding: 0 0 0.5rem 0;
             border-bottom: 1px solid $blue;
             .imageContainer{
-                //margin: 0 auto;
                 display: flex;
-                //border: 1px solid red;
                 flex-direction: column;
                 width: fit-content;
                 justify-content: center;
                 align-items: center;
+                max-width: 500px;
                 .imageShow-Thumb{
-                    width: 35vw;
-                    min-width: 200px;
-                    //border: 1px solid red;
+                    width: 100%;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    &:hover{
+                        filter: opacity(0.3);
+                    }
                 }
                 .image-Collection{
                     min-width: 200px;
                     height: fit-content;
-                    //border: 1px solid rgb(173, 76, 76);
+                    width: 100%;
                     display: grid;
                     grid-template-columns: repeat(3,30%);
                     justify-content: space-around;
+                    margin-top: 0.8rem;
                     .imageShow-Secondary{
                         align-self: center;
                         justify-self: center;
-                        //border: 1px solid red;
-                        width: 10vw;
+                        width: 100%;
                         min-width: 50px;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                        &:hover{
+                            filter: opacity(0.3);
+                        }
                     }
                 }
             }
             .productInfoContainer{
-                //border: 1px solid rgb(68, 255, 0);
                 width: 100%;
                 margin: 0 0 0 1.5rem;
                 max-width: 350px;
@@ -173,18 +202,15 @@ body{
                 display: flex;
                 flex-direction: column;
                 .productInfo-title{
+                    text-align: left;
                     font-size: 22px;
                     font-weight: 500;
-                    //border: 1px solid blue;
-                    border-bottom: 1px solid $light-blue;
                 }
                 .productPrice{
                     display: flex;
                     flex-direction: column;
-                    //border: 1px solid red;
                     height: 80px;
                     justify-content: space-evenly;
-                    border-bottom: 1px solid $light-blue;
                     .strg{
                         font-size: 14px;
                     }
@@ -196,33 +222,28 @@ body{
                         font-weight: 700;
                         font-size: 25px;
                         width: 50%;
-                        //border: 1px solid blue;
-                        border-bottom: 1px solid $light-blue;
                         font-family: 'Nunito', sans-serif;
                         color: $cyan;
-                        
                     }
                 }
                 .productInfo-purchaseOptions{
                     display: flex;
                     justify-content: space-evenly;
-                    //border: 1px solid blue;
                     text-align: justify;
-                    
                     select{
                         height: 2.5rem;
                         border: none;
                         border-radius: 5px;
                         width: 6rem;
-
+                        cursor: pointer;
                         option{
                             background-color: $light-gray;
                             font-size: 14px;
+                            cursor: pointer;
                         }
                     }
                 }
                 .productPurchase{
-                    //border: 1px solid yellow;
                     text-align: center;
                     display: flex;
                     flex-direction: column;
@@ -239,10 +260,28 @@ body{
                         color: $cyan;
                         font-weight: 700;
                         cursor: pointer;
+                        font-size: 14px;
+                        
                         &:hover{
                             background-color: $cyan;
                             color: $light-gray;
                         }
+                    }
+                    
+                    .--activeAnimation{
+                        width: 80%;
+                        padding: 10px;
+                        margin: 0 auto;
+                        background-color: $green;
+                        border: none;
+                        border-radius: 5px;
+                        color: $black;
+                        font-weight: 700;
+                        font-size: 14px;
+                        cursor: pointer;
+                        animation: linear addToCartBtn 0.7s;
+                        content: "ok";
+                        pointer-events: none;
                     }
                 }
             }
@@ -251,7 +290,6 @@ body{
             }
         }
         .itemSecondaryInfoContainer{
-            //border: 1px solid blue;
             margin: 1.5rem 0;
             span{
                 font-size: 12px;
@@ -277,10 +315,9 @@ body{
             background-color: #181818ee;
             .Modal-img{
                 margin: 0 auto;
-                width: 60%;
-                height: 50%;
-                max-width: 400px;
-                max-height: 500px;
+                width: 50%;
+                height: auto;
+                max-width: 800px;
             }
             .Modal-closeBtn{
                 position: absolute;
@@ -293,6 +330,7 @@ body{
                 border: none;
                 background-color: transparent;
                 color: $light-gray;
+                cursor: pointer;
                 .fa-xmark{
                     font-size: 30px;
                 }
@@ -468,7 +506,6 @@ body{
         }
     }
     .cart-container{
-        //background-color: #F39C12;
         width: 80vw;
         max-width: 900px;
         margin: 10px auto;
@@ -546,7 +583,7 @@ body{
             margin: 5px auto;
             
             .cart-finalPrice{
-                font-size: 18px;
+                font-size: 14px;
             }
             .cart-finalPurchase{
                 width: 200px;
@@ -584,11 +621,12 @@ body{
                 width: 50px;
             }
         }
-        .flex{
+        .WebContainerWrap{
             display: block;
             .Sidebar{
-                margin: 0;
+                margin: 0 auto;
                 width: 100%;
+                background-color: red;
                 ul{
                     .Side-Item{  
                         border: none;
@@ -643,7 +681,6 @@ body{
             }
         }
         .itemDetail{
-            //border: 1px solid blue;
             width: 85vw;
             margin: 0 auto;
             .itemPrimaryInfoContainer{
@@ -651,33 +688,27 @@ body{
                 .imageContainer{
                     margin: 0 auto;
                     display: flex;
-                    //border: 1px solid blue;
                     flex-direction: column;
-
                     width: auto;
                     background-color: $light-gray;
                     justify-content: space-evenly;
                     align-items: center;
-                    height: 30rem;
-                    .image-Show-Thumb{
-                        width: 500px;
-                        height: 350px;
+                    .imageShow-Thumb{
+                        width: 70vw;
                         min-width: 200px;
-                        //border: 1px solid blue;
                     }
                     .image-Collection{
                         min-width: 200px;
-                        width: 60vw;
+                        width: 70vw;
                         height: fit-content;
-                        //border: 1px solid rgb(173, 76, 76);
                         display: grid;
                         grid-template-columns: repeat(3,30%);
                         justify-content: space-evenly;
+                        gap: 10px;
                         .imageShow-Secondary{
                             align-self: center;
                             justify-self: center;
-                            //border: 1px solid blue;
-                            width: 10vw;
+                            width: 20vw;
                             min-width: 50px;
                         }
                     }
@@ -693,8 +724,6 @@ body{
                     }
                 }
                 .productPurchase-mobile{
-                    //border: 1px solid yellow;
-
                     text-align: center;
                     display: flex;
                     flex-direction: column;
@@ -705,16 +734,17 @@ body{
                         display: flex;
                         justify-content: space-evenly;
                         text-align: center;
-                        //border: 1px solid blue;
                         select{
                             height: 2.5rem;
                             border: none;
                             border-radius: 5px;
                             width: 8rem;
                             text-align: center;
+                            cursor: pointer;
                             option{
                                 background-color: $light-gray;
                                 font-size: 14px;
+                                cursor: pointer;
                             }
                             &:hover::after {
                                 color: #F39C12;
@@ -731,10 +761,27 @@ body{
                         color: $cyan;
                         font-weight: 700;
                         cursor: pointer;
+                        font-size: 18px;
+
                         &:hover{
                             background-color: $cyan;
                             color: $light-gray;
                         }
+                    }
+                    .--activeAnimation{
+                        width: 80%;
+                        padding: 10px;
+                        margin: 0 auto;
+                        background-color: $green;
+                        border: none;
+                        border-radius: 5px;
+                        color: $black;
+                        font-weight: 700;
+                        font-size: 18px;
+                        cursor: pointer;
+                        animation: linear addToCartBtn 0.7s;
+                        content: "ok";
+                        pointer-events: none;
                     }
                 }
 
@@ -760,14 +807,13 @@ body{
                 text-align: center;
                 .Modal-img{
                     margin: 0 auto;
-                    width: 70%;
-                    height: 40%;
-                    max-width: 400px;
-                    max-height: 350px;
+                    width: 80%;
+                    height: auto;
+                    max-width: none;
+                    max-height: none;
                 } 
                 .Modal-closeBtn{
                     position: static;
-                    
                     padding: 1rem;
                     border: none;
                     background-color: transparent;

@@ -8,7 +8,6 @@ function ImageGallery(imgs) {
     const ModalImage = (source) => {
         setModal(source)
         setIsOpen(true)
-        //console.log(Modal);
     }
     return (
         <>

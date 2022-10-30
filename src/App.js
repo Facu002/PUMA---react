@@ -20,7 +20,7 @@ function App() {
 
         <Nav/>
 
-        <div className="flex">
+        <div className="WebContainerWrap">
         
         <Sidebar/>
 

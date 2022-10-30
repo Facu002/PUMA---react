@@ -25,9 +25,9 @@ function Banner(props) {
   // },[])
 
       return (
-        <div className='Banner'>
-            <div className="Banner-img__container">
-              <img id="counter" className='Banner-img' src={img1} alt="caca"  />
+        <div className='banner'>
+            <div className="banner-img__container">
+              <img id="counter" className='banner-img' src={img1} alt="caca"  />
           </div>
         </div>
       )

@@ -6,6 +6,8 @@ function ItemSelectors(props) {
 
     const [selectedSize, setSelectedSize] = useState();
 
+    const [btnAnimation, setbtnAnimation] = useState(false);
+
     let arr = []
     let sizeOptions = (props.size)
 
@@ -19,10 +21,23 @@ function ItemSelectors(props) {
     function AddProductToCart() {
         if (selectedQuantity !== undefined && selectedSize !== undefined) {
             props.onPurchase(parseInt(selectedQuantity, 10), selectedSize)
+            // setbtnAnimation("productInfo-purchaseBtn --activeAnimation")
+            const animate = () => {
+            
+                // Button begins to shake
+                setbtnAnimation(true);
+                
+                // Buttons stops to shake after 2 seconds
+                setTimeout(() => setbtnAnimation(false), 2000);
+                
+            }
+            animate()
         }else{
-            console.log('nonono')
+            console.log("can't process product details")
         }
     }
+
+
 
     return (
         <>
@@ -46,8 +61,13 @@ function ItemSelectors(props) {
             </div>
         </div>
 
-        <button className='productInfo-purchaseBtn' onClick={() => AddProductToCart()}>Agregar al carrito</button>
-        
+        <button className={btnAnimation ? "--activeAnimation" : "productInfo-purchaseBtn"} onClick={() => AddProductToCart()}>
+            {
+            btnAnimation 
+            ?"Agregado al carrito"
+            :"Agregar al carrito"
+            }
+        </button>
         </>
     )
 

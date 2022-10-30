@@ -8,7 +8,7 @@ function CategoriesList(props) {
                 <NavLink className={(navData) => navData.isActive ? "CurrentCategory" : "Side-Item"} to="category/footwear">Calzado</NavLink>
                 <NavLink className={(navData) => navData.isActive ? "CurrentCategory" : "Side-Item"} to="category/clothes" >Ropa</NavLink>
                 <NavLink className={(navData) => navData.isActive ? "CurrentCategory" : "Side-Item"} to="category/sport" >Deportes</NavLink>
-                <NavLink className={(navData) => navData.isActive ? "CurrentCategory" : "Side-Item"} to="category/collection" >Colleccion</NavLink>
+                <NavLink className={(navData) => navData.isActive ? "CurrentCategory" : "Side-Item"} to="category/collection" >Colección</NavLink>
                 
             </li>
         )
