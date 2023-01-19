@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 
 function Modal({open, source, onClose}) {
-    const [Modal, setModal] = useState(false)
+    // const [Modal, setModal] = useState(false)
 
     if (!open) {
         return null

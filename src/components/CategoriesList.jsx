@@ -1,8 +1,8 @@
 import React from 'react'
-import { NavLink, exact } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function CategoriesList(props) {
-    if (props.show == true) {
+    if (props.show === true) {
         return (
             <li className='Category-List'>
                 <NavLink className={(navData) => navData.isActive ? "CurrentCategory" : "Side-Item"} to="category/footwear">Calzado</NavLink>

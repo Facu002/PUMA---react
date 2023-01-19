@@ -16,7 +16,7 @@ function Sidebar() {
             <ul>
                 <NavLink className='Side-Item' to="/">INICIO</NavLink>
 
-                <a className='Side-Item' onClick={()=>openCategory()} to="/">CATEGORIAS</a>
+                <a href='#' className='Side-Item' onClick={()=>openCategory()} to="/">CATEGORIAS</a>
                 
                 <CategoriesList show={Categories}/>
 

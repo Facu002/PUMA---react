@@ -24,7 +24,7 @@ function Banner(props) {
         slider.style.transition = 'all 0.8s'
         index++
 
-        if (index == sliderIndividual.length) {
+        if (index === sliderIndividual.length) {
           setTimeout(() => {
             slider.style.transform = 'translateX(0px)'
             slider.style.transition = 'none'
