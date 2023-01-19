@@ -497,6 +497,13 @@ body .cart-container {
 body .cart-container .productInCart-container {
   margin: 10px 0;
 }
+body .cart-container .productInCart-container .productInCart-empty {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
 body .cart-container .productInCart-container .productInCart-itemContainer {
   width: 70vw;
   background-color: #EDF2F4;

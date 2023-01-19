@@ -101,13 +101,8 @@ body{
             width: 100%;
             
             .banner{
-                // text-align: center;
-                // width: 100%;
                 overflow: hidden;
-                // margin: 0 auto;
                 .slider-banner-container{
-                    // display: flex;
-                    // justify-content: space-around;
                     width: 100%;
                     display: flex;
                     .banner-img__container{
@@ -519,8 +514,11 @@ body{
         flex-direction: column;
         .productInCart-container{
             margin: 10px 0;
-            //background-color: #181818;
-
+            .productInCart-empty{
+                width: fit-content;
+                margin: 0 auto;
+                text-align: center;
+            }
             .productInCart-itemContainer{
                 width: 70vw;
                 background-color: $light-gray;

@@ -3,35 +3,15 @@ import img0 from '../img/slider_0.jpg'
 import img1 from '../img/slider_1.jpg'
 import img2 from '../img/slider_2.jpg'
 function Banner(props) {
-  //let colRef = query(collection(db, "BannerImages"));
   
-  // useEffect(()=>{
-  //   // get collection data
-    
-  //     getDocs(colRef) 
-  //       .then(snapshot => {
-  //           // console.log(snapshot.docs)
-  //           snapshot.docs.forEach(doc => {
-  //           list.push({ ...doc.data()})
-  //           })
-  //           setImages(list)
-  //           //console.log(list);
-  //           //console.log('1')
-  //           //console.log('2')
-  //           //caca()
-  //       })
-  //       .catch(err => {
-  //           console.log(err.message)
-  //       })
-  // },[])
   
   useEffect(() => {
     let slider = document.querySelector('.slider-banner-container');
     let sliderIndividual = document.querySelectorAll('.banner-img__container');
-    console.log(sliderIndividual);
+
     let index = 1;
     let screenWidth = sliderIndividual[0].clientWidth;
-    let interval = 5000;
+    let interval = 3500;
 
     window.addEventListener('resize', function(params) {
         screenWidth = sliderIndividual[0].clientWidth;
@@ -63,6 +43,7 @@ function Banner(props) {
 
       return (
         <div className='banner'>
+
           <div className="slider-banner-container">
             <div className="banner-img__container">
               <img id="counter" className='banner-img' src={img0} alt="banner"  />
@@ -76,7 +57,6 @@ function Banner(props) {
             <div className="banner-img__container">
               <img id="counter" className='banner-img' src={img0} alt="banner"  />
             </div>
-
           </div>
 
         </div>
