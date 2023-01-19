@@ -14,7 +14,7 @@ function Modal({open, source, onClose}) {
             <img className='Modal-img' src={`${source}`} alt="modal" />
             <button className='Modal-closeBtn' onClick={onClose}><i class="fa-solid fa-xmark"></i></button>
         </div>
-        : console.log('nop')
+        : console.log('modal error')
         }
         </>
     )

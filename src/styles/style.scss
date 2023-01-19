@@ -14,17 +14,12 @@ $light-green: #baffd9;
     font-size: 0.8rem;
     @keyframes addToCartBtn {
         0%{
-            // background-color: $light-blue;
-            // background-position: -200px;
             background: linear-gradient(to right, $light-green 50%, $light-gray 50%);
             background-size: 200% 100%;
             background-position: right bottom;
             color: transparent;
         }
         100%{
-            // background-color: $light-green;
-            // background-position: -100px;
-            // background-size: 1px;
             background: linear-gradient(to right, $light-green 50%, $light-gray 50%);
             background-size: 200% 100%;
             background-position: left bottom;
@@ -58,7 +53,6 @@ body{
                 display: flex;
                 flex-direction: column;
                 padding: 0;
-                
                 .Side-Item{
                     padding: 0.8rem 1rem;
                     list-style: none;
@@ -130,7 +124,6 @@ body{
                 gap: 15px;
                 justify-items: center;
                 margin: 10px 0;
-                
                 .item-container{
                     text-align: center;
                     text-decoration: none;
@@ -398,11 +391,9 @@ body{
                 }
             }
             &__mid{
-                //border: 1px solid blue;
                 height: 45vh;
                 display: flex;
                 margin: 0 auto;
-                //margin: 0.5rem 2rem;
                 width: 90%;
                 .footer-mid_Column{
                     width: 25%;
@@ -539,7 +530,6 @@ body{
                     align-items: center;
                     justify-content: center;
                     height: 100px;
-
                     h1{
                         font-size: 12px;
                     }
@@ -630,7 +620,7 @@ body{
             .Sidebar{
                 margin: 0 auto;
                 width: 100%;
-                background-color: red;
+                // background-color: red;
                 ul{
                     .Side-Item{  
                         border: none;
@@ -885,7 +875,6 @@ body{
                     height:auto;
                     display: block;
                     margin: 0 auto;
-                    //margin: 0.5rem 2rem;
                     width: 90%;
                     .footer-mid_Column{
                         width: 100%;
@@ -1000,8 +989,6 @@ body{
             align-items: center;
             .productInCart-container{
                 margin: 10px 0;
-                //background-color: #181818;
-    
                 .productInCart-itemContainer{
                     width: 90vw;
                     .productInCart-image{
@@ -1058,6 +1045,5 @@ body{
         box-sizing: border-box;
         width: 100%;
         height: auto;
-
     }
 }

@@ -609,7 +609,6 @@ body .cart-container .cartPurchase-container .cart-finalPurchase:hover {
   body .WebContainerWrap .Sidebar {
     margin: 0 auto;
     width: 100%;
-    background-color: red;
   }
   body .WebContainerWrap .Sidebar ul .Side-Item {
     border: none;

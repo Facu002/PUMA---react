@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { doc, getDoc, collection, query, where } from "firebase/firestore";
+import { doc, getDoc} from "firebase/firestore";
 import { db } from './firebaseConfig';
 import ItemInfo from './ItemInfo';
 function ItemDetail() {

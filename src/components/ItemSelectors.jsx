@@ -1,7 +1,6 @@
-import {React, useEffect, useState} from 'react'
+import {React, useState} from 'react'
 
 function ItemSelectors(props) {
-    //const [size, setSize] = useState([])
     const [selectedQuantity, setSelectedQuantity] = useState()
 
     const [selectedSize, setSelectedSize] = useState();
@@ -21,15 +20,9 @@ function ItemSelectors(props) {
     function AddProductToCart() {
         if (selectedQuantity !== undefined && selectedSize !== undefined) {
             props.onPurchase(parseInt(selectedQuantity, 10), selectedSize)
-            // setbtnAnimation("productInfo-purchaseBtn --activeAnimation")
             const animate = () => {
-            
-                // Button begins to shake
                 setbtnAnimation(true);
-                
-                // Buttons stops to shake after 2 seconds
                 setTimeout(() => setbtnAnimation(false), 2000);
-                
             }
             animate()
         }else{

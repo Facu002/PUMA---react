@@ -16,11 +16,9 @@ function Sidebar() {
             <ul>
                 <NavLink className='Side-Item' to="/">INICIO</NavLink>
 
-
                 <a className='Side-Item' onClick={()=>openCategory()} to="/">CATEGORIAS</a>
                 
                 <CategoriesList show={Categories}/>
-
 
                 <NavLink className='Side-Item' to="/cart" >CARRITO ({context.totalItems()})</NavLink>
 

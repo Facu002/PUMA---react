@@ -40,7 +40,6 @@ function Cart() {
             <path d="M21 3l-4 4" />
             </svg>
             <h1>Carrito vacio</h1>
-
             </div>
     }
         </div>

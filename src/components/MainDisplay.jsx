@@ -18,10 +18,8 @@ function MainDisplay() {
         colRef = query(collection(db, "products"));
     }
     useEffect(()=>{
-        // get collection data
             getDocs(colRef)
             .then(snapshot => {
-                // console.log(snapshot.docs)
                 let list = []
                 snapshot.docs.forEach(doc => {
                 list.push({ ...doc.data(), key: doc.id })
@@ -44,7 +42,6 @@ function MainDisplay() {
                     if (searchBarValue === "") {
                         return item
                     }else if (item.name.toLowerCase().includes(searchBarValue.toLowerCase())) {
-                        //returns filtered array
                         return item;
                     }
                 }).map((item, index) =>
